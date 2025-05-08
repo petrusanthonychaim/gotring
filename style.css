@@ -66,7 +66,7 @@ list-style: none; /* biar ga ada bullet point */
 }
 
 .hero-section {
-  background: url(asset/BG1.png) no-repeat center center;
+  background: url(asset/gif.gif) no-repeat center center;
   background-size: cover;
   width: 100%;
   min-height: 500px;
@@ -249,4 +249,90 @@ input[type=checkbox] {
   height: auto;
   object-fit: cover;
   background-color: #eee;
+}
+
+/* Restaurant container styles */
+.restaurant-container {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.restaurant-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu table styles */
+.menu-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu-row {
+  display: flex;
+  width: 100%;
+}
+
+.menu-cell {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-cell:last-child {
+  border-right: none;
+}
+
+/* Image styles */
+.menu-item-image {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.menu-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Price row styles */
+.prices-row {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.price-cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #e74c3c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-row {
+      flex-direction: column;
+  }
+  
+  .menu-cell {
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-cell:last-child {
+      border-bottom: none;
+  }
 }
