@@ -7,21 +7,28 @@
     <link rel="icon" type="image" href="/gotring/logo-gotring/GoTringN.png">
     <link rel="stylesheet" href="style.css"/>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
 </head>
 <body>
-  <!-- navbar -->
+    <!-- navbar -->
     <nav class="navbar sticky-top bg-body-tertiary">
-        <div class="container-fluid">
-          <img src="/gotring/logo-gotring/gotringN1.png" alt="Bootstrap" width="140px" height="65px">
-          <div class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-          </div>
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Kiri: Logo + Home -->
+        <div class="d-flex align-items-center gap-4">
+          <a href="#top"><img src="/gotring/logo-gotring/gotringN1.png" alt="Logo" width="140px" height="65px"></a>
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Recommendation</a>
         </div>
+        
+        <!-- Kanan: Welcome User -->
+        <a class="nav-link" href="#">Hello, User!</a>
       </div>
     </nav>
     <!-- endnavbar -->
@@ -29,16 +36,54 @@
     <!-- hero section -->
      <div>
        <section class="hero-section">
-        <!-- <img src="asset/gambar-page.png" alt="Gambar Page" style="width:150px"> -->
+        <div class="centered">Bingung? Katering-in aja</div>
+        <div class="centered-bawah">Pasti bisa katering di Restoran favorit kamu sekarang juga.</div>
+        <img src="/gotring/logo-gotring/GoTring.png" alt="logo" width="100px" height="100px" margin-left="auto">
      </div>
     <!-- end hero section -->
+    
+    <!-- Welcome Text -->
+    <div>
+      <h1 class="text-aturmenu">Yuk kita atur menu katering kamu seminggu!</h1>
+      <h2 class="text-aturmenu-bawah">Kamu lagi suka makanan apa?</h2>
+    </div>
+    <!-- end Welcome Text -->
+
+    <!-- checkbox -->
+     
+    <input type="checkbox" id="check1"/>
+    <label for="check1">Daging Sapi</label>
+
+    <input type="checkbox" id="check2"/>
+    <label for="check2">Daging Ayam</label>
+
+    <input type="checkbox" id="check3"/>
+    <label for="check3">Seafood</label>
+
+    <input type="checkbox" id="check4"/>
+    <label for="check4">Pedas</label>
+
+    <input type="checkbox" id="check5"/>
+    <label for="check5">No Sayur</label>
+
+    <input type="checkbox" id="check6"/>
+    <label for="check6">Alergi</label>
+
+    <!-- end checkbox -->
+
+    <div>
+      <section class="features">
+        <!-- Put your next layout chunk here -->
+      </section>
+    </div>
 
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
+    <!-- footer -->
     <div class="footer">
-      <p>Ⓒ BSD26 - Petrus, Bella, Rizky, Adam</p>
+      <p>Ⓒ BSD26 - GoTring</p>
     </div>
 </body>
 </html>
