@@ -11,8 +11,18 @@
   font-style: normal;
 }
 
-body {
-  
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.home:hover {
+  color: #00aa13;
+  cursor: pointer;
 }
   
 nav ul li {
@@ -72,7 +82,7 @@ list-style: none; /* biar ga ada bullet point */
   min-height: 500px;
   padding: 50px 50px 10px;
   border-radius: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .hero-section img {
@@ -126,29 +136,26 @@ list-style: none; /* biar ga ada bullet point */
 }
 
 #check1 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   pointer-events: none;
+  margin-right: 5px;
 }
 #check2 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   pointer-events: none;
+  margin-right: 5px;
 }
 #check3 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   pointer-events: none;
+  margin-right: 5px;
 }
 #check4 {
-  margin-top: 10px;
+  /* margin-top: 0px; */
   pointer-events: none;
+  margin-right: 5px;
 }
-#check5 {
-  margin-top: 10px;
-  pointer-events: none;
-}
-#check6 {
-  margin-top: 10px;
-  pointer-events: none;
-}
+
 
 label {
   font-weight: 500;
@@ -176,12 +183,6 @@ input[type=checkbox] {
   accent-color: black;
 }
 #check4:checked {
-  accent-color: black;
-}
-#check5:checked {
-  accent-color: black;
-}
-#check6:checked {
   accent-color: black;
 }
 
@@ -218,6 +219,11 @@ input[type=checkbox] {
 
 .restaurants-horizontal::-webkit-scrollbar {
   display: none;
+}
+
+.restaurants-section {
+  font-family: "Lexend";
+  font-weight: bold ;
 }
 
 .footer {
