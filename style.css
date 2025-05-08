@@ -66,13 +66,12 @@ list-style: none; /* biar ga ada bullet point */
 }
 
 .hero-section {
-  background: url(asset/BG.png) no-repeat center center;
+  background: url(asset/BG1.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   min-height: 500px;
   padding: 50px 50px 10px;
-  border-radius: 30px;
-  margin-top: 20px;
+  border-radius: 20px;
   margin-bottom: 150px;
 }
 
@@ -85,6 +84,7 @@ list-style: none; /* biar ga ada bullet point */
 
 .centered {
   position: absolute;
+  text-align: center;
   top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -96,7 +96,8 @@ list-style: none; /* biar ga ada bullet point */
 
 .centered-bawah {
   position: absolute;
-  top: 42%;
+  text-align: center;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
@@ -191,6 +192,34 @@ input[type=checkbox] {
   color: #00aa13;
 }  */
 
+.custom-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.restaurants-horizontal {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 0 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.restaurants-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
 .footer {
   width: 100%;
   height: 70px;
@@ -201,3 +230,23 @@ input[type=checkbox] {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.image-logo{ 
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.restaurant-image {
+  width: full;
+  height: auto;
+  object-fit: cover;
+  background-color: #eee;
+}
