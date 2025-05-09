@@ -1,229 +1,28 @@
-.container-fluid {
-    background-color: #F8F9FA;
-    margin-left: 50px;
-    /* padding-top: 0px; */
-    /* box-shadow: 0px 1px 1px rgba(0,0,0,.2); */
-  }
+#loadingAlertModal input[type="text"],
+#loadingAlertModal input[type="number"] {
 
-.varela-round-regular {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
+#heroBackgroundImageSection {
+  background-image: url('asset/BGnew.gif'); 
 }
 
-.home {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+#stickyMenuPlanner {
+  background-color: white; 
 }
 
-.home:hover {
-  color: #00aa13;
-  cursor: pointer;
-}
-  
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* font-weight: bold; */
-  margin-left: 40px;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  /* font-weight: bold; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 40px;
-  font-size: 20px;
-  /* padding-top: 10px; */
-}
-
-/* nav ul li a:hover{
-  color: #00aa13;
-  transition: 0.3s;
-} */
-
-.navbar .nav-link  {
-  font-size: 20px !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-  padding: 0;
-  margin-left: 20px;
-  /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
-}
-
-.navbar .nav-link:hover {
-  color: #00aa13;
-  transition: 0.3s;
-}
-
-.navbar img {
-  vertical-align: middle;
-  margin-left: 20px;
-}
-
-.navbar-nav .nav-item {
-list-style: none; /* biar ga ada bullet point */
-}
-
-.hero-section {
-  background: url(asset/gif.gif) no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  min-height: 500px;
-  padding: 50px 50px 10px;
-  border-radius: 20px;
-  margin-bottom: 50px;
-}
-
-.hero-section img {
-  position: absolute;
-  margin-left: 870px;
-  margin-bottom: 50px;
-  top: 18%;
-}
-
-.centered {
-  position: absolute;
+.quantity-control .quantity-value {
+  min-width: 20px; 
   text-align: center;
-  top: 36%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-  font-family: "Quicksand";
-  font-weight: bold;
-  color: white
 }
 
-.centered-bawah {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-  font-family: "Quicksand";
-  font-weight: 400;
-  color: white
+.menu-item-card.selected {
+  border: 2px solid #2563eb; 
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
 }
 
-/* .centered-and-cropped { 
-  object-fit: cover 
-} */
-
-.text-aturmenu {
-  text-align: center;
-  font-family: "Quicksand";
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.text-aturmenu-bawah {
-  text-align: center;
-  font-family: "Quicksand";
-  font-weight: bold;
-  font-size: 30px;
-  margin-bottom: 100px;
-}
-
-#check1 {
-  /* margin-top: 10px; */
-  pointer-events: none;
-  margin-right: 5px;
-}
-#check2 {
-  /* margin-top: 10px; */
-  pointer-events: none;
-  margin-right: 5px;
-}
-#check3 {
-  /* margin-top: 10px; */
-  pointer-events: none;
-  margin-right: 5px;
-}
-#check4 {
-  /* margin-top: 0px; */
-  pointer-events: none;
-  margin-right: 5px;
-}
-
-
-label {
-  font-weight: 500;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  padding-right: 8px;
-  font-size: 23px;
-  margin-left: 5px;
-  margin-bottom: 500px;
-}
-
-input[type=checkbox] {
-  width: 20px; height:20px;
-  margin-left: 40px;
-}
-
-#check1:checked {
-  accent-color: black;
-}
-#check2:checked {
-  accent-color: black;
-}
-#check3:checked {
-  accent-color: black;
-}
-#check4:checked {
-  accent-color: black;
-}
-
-/* #check1:checked ~ label {
-  color: black;
-} */
-/* #check2:checked ~ label {
-  color: #00aa13;
-}  */
-
-.custom-divider {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  width: 100%;
-}
-
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  min-height: 100vh;
-}
-
-.restaurants-horizontal {
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  padding: 10px 0 20px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.restaurants-horizontal::-webkit-scrollbar {
-  display: none;
-}
-
-.restaurants-section {
-  font-family: "Lexend";
-  font-weight: bold ;
+input[readonly].bg-gray-50 {
+    cursor: default;
 }
 
 .footer {
@@ -232,113 +31,9 @@ input[type=checkbox] {
   background-color: #00aa13;
   color: white;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.image-logo{ 
-  width: 100px;
-  height: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.scrollmenu {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-.restaurant-image {
-  width: full;
-  height: auto;
-  object-fit: cover;
-  background-color: #eee;
-}
-
-/* Restaurant container styles */
-.restaurant-container {
-  margin-bottom: 50px;
-  width: 100%;
-}
-
-.restaurant-title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Menu table styles */
-.menu-table {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.menu-row {
-  display: flex;
-  width: 100%;
-}
-
-.menu-cell {
-  flex: 1;
-  padding: 15px;
-  text-align: center;
-  border-right: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-cell:last-child {
-  border-right: none;
-}
-
-/* Image styles */
-.menu-item-image {
-  width: 120px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.menu-item-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Price row styles */
-.prices-row {
-  background-color: #f8f8f8;
-  font-weight: bold;
-}
-
-.price-cell {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #e74c3c;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .menu-row {
-      flex-direction: column;
-  }
-  
-  .menu-cell {
-      border-right: none;
-      border-bottom: 1px solid #ddd;
-  }
-  
-  .menu-cell:last-child {
-      border-bottom: none;
-  }
 }

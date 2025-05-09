@@ -3,338 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasti bisa katering - GoTring</title>
-    <link rel="icon" type="image" href="/gotring/logo-gotring/GoTringN.png">
+    <title>#PastiBisaKatering - gotring</title>
+    <link rel="icon" type="image" href="/logo-gotring/GoTringN.png">
     <link rel="stylesheet" href="style.css"/>
-    
-    <!-- Google Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        /* Custom styles for quantity controls */
-        .quantity-control {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        
-        .quantity-btn {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 1px solid #ddd;
-            background-color: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-weight: bold;
-            user-select: none;
-            transition: all 0.2s;
-        }
-        
-        .quantity-btn:hover {
-            background-color: #e9ecef;
-        }
-        
-        .quantity-btn:active {
-            transform: scale(0.95);
-        }
-        
-        .quantity-value {
-            margin: 0 10px;
-            min-width: 20px;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .menu-item-card {
-            transition: all 0.2s;
-        }
-        
-        .menu-item-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* Style for selected item (when quantity is 1) */
-        .selected {
-            border: 2px solid #3b82f6;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-        }
-    </style>
 </head>
 
-<body id="top">
-    <nav class="w-full bg-primary h-14 p-2 z-[9999] sticky top-0 flex items-center justify-between">
-      <!-- Left side: Logo + Home -->
-      <div class="flex items-center gap-4">
-        <img src="/gotring/logo-gotring/gotringN1.png" alt="gotring" width="140px" height="65px">
-        <div class="home">
-          <a href="#top">Home</a>
+<body id="top" class="bg-gray-50">
+    <div id="loadingAlertModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[10000]" style="display: none;">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl text-center w-11/12 sm:w-auto max-w-md">
+            <h2 class="text-xl sm:text-2xl font-bold mb-5 text-gray-800">Selamat Datang!</h2>
+            
+            <div class="text-left mb-4">
+                <label for="inputNama" class="block mb-1 text-sm sm:text-base text-gray-700">Nama:</label>
+                <input type="text" id="inputNama" class="w-full p-2 border border-gray-300 rounded-md text-sm sm:text-base focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan nama Anda">
+            </div>
+            
+            <div class="text-left mb-6">
+                <label for="inputUmur" class="block mb-1 text-sm sm:text-base text-gray-700">Umur:</label>
+                <input type="number" id="inputUmur" class="w-full p-2 border border-gray-300 rounded-md text-sm sm:text-base focus:ring-blue-500 focus:border-blue-500" placeholder="Masukkan umur Anda">
+            </div>
+            
+            <button id="submitAlertDataButton" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2.5 px-4 rounded-md text-sm sm:text-base transition-colors duration-150">
+                Simpan & Lanjutkan
+            </button>
         </div>
-      </div>
-    
-      <!-- Right side: Nav items -->
-      <div id="nav_items"
-        class="md:flex flex-col hidden md:flex-row font-semibold text-sm fixed md:static z-90 top-14 left-0 w-full md:w-max text-black bg-primary items-center gap-3">
-        <div class="cursor-pointer mx-auto w-max px-4 py-2">
-          <a href="#">Rizky Tartila</a>
+    </div>
+
+    <nav class="w-full bg-primary h-14 p-2 z-[9998] sticky top-0 flex items-center justify-between shadow-md">
+        <div class="flex items-center gap-4">
+            <img src="/logo-gotring/gotringN1.png" alt="gotring" width="140px" height="65px">
+            <div class="home">
+                <a href="#top">Home</a>
+            </div>
         </div>
+        <div id="nav_items"
+            class="md:flex flex-col hidden md:flex-row font-semibold text-sm fixed md:static z-90 top-14 left-0 w-full md:w-max text-black bg-primary items-center gap-3">
+            <div class="cursor-pointer mx-auto w-max px-4 py-2">
+                <a href="#">Rizky Tartila</a> </div>
         </div>
     </nav>
-            <!-- <div class="cursor-pointer mx-auto w-max px-4 py-1 bg-black shadow-lg text-white rounded-lg">
-                <a href="#">Login</a>
+
+    <section id="heroBackgroundImageSection" class="h-[350px] md:h-[450px] bg-cover bg-center relative">
+        </section>
+
+    <div id="stickyMenuPlanner" class="sticky top-[56px] z-30 bg-white shadow-lg mb-8">
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 px-4 py-4 border-b">
+            <label class="flex items-center text-sm font-medium cursor-pointer">
+                <input type="checkbox" id="noMeatCheckbox" data-category="meat" class="filter-checkbox accent-black mr-2 h-5 w-5"> males gigit daging
+            </label>
+            <label class="flex items-center text-sm font-medium cursor-pointer">
+                <input type="checkbox" id="noSeafoodCheckbox" data-category="seafood" class="filter-checkbox accent-black mr-2 h-5 w-5"> alergi seafood
+            </label>
+            <label class="flex items-center text-sm font-medium cursor-pointer">
+                <input type="checkbox" id="noVegetablesCheckbox" data-category="vegetables" class="filter-checkbox accent-black mr-2 h-5 w-5"> hah sayur ?!
+            </label>
+            <label class="flex items-center text-sm font-medium cursor-pointer">
+                <input type="checkbox" id="noSpicyCheckbox" data-category="spicy" class="filter-checkbox accent-black mr-2 h-5 w-5"> gerd 🤢
+            </label>
+        </div>
+
+        <section class="px-4 py-6">
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100 text-center">
+                            <th class="border px-4 py-2 text-sm md:text-base">Hari</th>
+                            <th class="border px-4 py-2 text-sm md:text-base">Senin</th>
+                            <th class="border px-4 py-2 text-sm md:text-base">Selasa</th>
+                            <th class="border px-4 py-2 text-sm md:text-base">Rabu</th>
+                            <th class="border px-4 py-2 text-sm md:text-base">Kamis</th>
+                            <th class="border px-4 py-2 text-sm md:text-base">Jumat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center bg-white">
+                            <td class="border px-4 py-2 font-semibold align-middle text-sm md:text-base">Menu Pilihan</td>
+                            <td class="border px-1 py-1 md:px-2 md:py-2"><input type="text" id="userInputSenin" readonly class="w-full p-1 border rounded text-xs md:text-sm bg-gray-50 focus:outline-none" placeholder="- Kosong -"></td>
+                            <td class="border px-1 py-1 md:px-2 md:py-2"><input type="text" id="userInputSelasa" readonly class="w-full p-1 border rounded text-xs md:text-sm bg-gray-50 focus:outline-none" placeholder="- Kosong -"></td>
+                            <td class="border px-1 py-1 md:px-2 md:py-2"><input type="text" id="userInputRabu" readonly class="w-full p-1 border rounded text-xs md:text-sm bg-gray-50 focus:outline-none" placeholder="- Kosong -"></td>
+                            <td class="border px-1 py-1 md:px-2 md:py-2"><input type="text" id="userInputKamis" readonly class="w-full p-1 border rounded text-xs md:text-sm bg-gray-50 focus:outline-none" placeholder="- Kosong -"></td>
+                            <td class="border px-1 py-1 md:px-2 md:py-2"><input type="text" id="userInputJumat" readonly class="w-full p-1 border rounded text-xs md:text-sm bg-gray-50 focus:outline-none" placeholder="- Kosong -"></td>
+                        </tr>
+                        <tr class="text-center bg-gray-50">
+                            <td class="border px-4 py-2 font-semibold align-middle text-sm md:text-base">Rekomendasi</td>
+                            <td class="border px-4 py-2 text-xs md:text-sm text-gray-600" id="rekomendasiSenin">-</td>
+                            <td class="border px-4 py-2 text-xs md:text-sm text-gray-600" id="rekomendasiSelasa">-</td>
+                            <td class="border px-4 py-2 text-xs md:text-sm text-gray-600" id="rekomendasiRabu">-</td>
+                            <td class="border px-4 py-2 text-xs md:text-sm text-gray-600" id="rekomendasiKamis">-</td>
+                            <td class="border px-4 py-2 text-xs md:text-sm text-gray-600" id="rekomendasiJumat">-</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="cursor-pointer mx-auto w-max px-4 py-1 bg-white shadow-lg rounded-lg">
-                <a href="#">Signup</a>
-            </div> -->
-        </div>
-    </nav>      
-
-    <!-- hero section -->
-    <div>
-        <section class="hero-section">
-         <!-- <img src="/asset/BG.png" alt="logo" class ="image-logo"> -->
-         <div class="centered">Yuk kita atur menu katering kamu seminggu!</div>
-         <div class="centered-bawah">Kamu lagi suka makanan apa?</div>
-         <img src="/logo-gotring/GoTring.png" alt="logo" class ="image-logo">
-       </section>
-      </div>
-     <!-- end hero section -->
-    
-         <!-- checkbox --> 
-    <!-- Sticky Checkbox Section -->
-    <div class="sticky top-14 z-40">
-        <div class="flex flex-wrap items-center justify-center gap-10 px-4 py-10">
-        <!-- <div class="flex flex-wrap items-center justify-center gap-4 px-4 py-10 max-w-screen-lg mx-auto"> -->
-          <label class="items-center text-sm font-medium">
-            <input type="checkbox" id="check1" class="accent-black"> Daging Sapi
-          </label>
-          <label class="items-center text-sm font-medium">
-            <input type="checkbox" id="check2" class="accent-black"> Seafood
-          </label>
-          <label class="items-center text-sm font-medium">
-            <input type="checkbox" id="check3" class="accent-black"> No Sayur
-          </label>
-          <label class="items-center text-sm font-medium">
-            <input type="checkbox" id="check4" class="accent-black"> Pedas
-          </label>        
-        </div>
-      </div>
-  
-      <!-- Table Menu Mingguan -->
-      <section class="px-4 py-8">
-        <div class="overflow-x-auto">
-          <table class="min-w-full table-auto border border-gray-300">
-            <thead>
-              <tr class="bg-gray-100 text-center">
-                <th class="border px-4 py-2">Hari</th>
-                <th class="border px-4 py-2">Senin</th>
-                <th class="border px-4 py-2">Selasa</th>
-                <th class="border px-4 py-2">Rabu</th>
-                <th class="border px-4 py-2">Kamis</th>
-                <th class="border px-4 py-2">Jumat</th>
-              </tr>
-          </thead>
-          <tbody>
-  
-          <!-- User Input Row -->
-          <tr class="text-center bg-white">
-            <td class="border px-4 py-2 font-semibold">Input User</td>
-            <td class="border px-4 py-2" id="menu-senin">[pilihan user]</td>
-            <td class="border px-4 py-2" id="menu-selasa">[pilihan user]</td>
-            <td class="border px-4 py-2" id="menu-rabu">[pilihan user]</td>
-            <td class="border px-4 py-2" id="menu-kamis">[pilihan user]</td>
-            <td class="border px-4 py-2" id="menu-jumat">[pilihan user]</td>
-          </tr>
-        </div>
-  
-          <!-- Rekomendasi Row -->
-          <tr class="text-center bg-gray-50">
-            <td class="border px-4 py-2 font-semibold">Rekomendasi</td>
-            <td class="border px-4 py-2 text-sm text-gray-600">Gudeg, Ayam Serundeng</td>
-            <td class="border px-4 py-2 text-sm text-gray-600">Tongseng, Sayur Asam</td>
-            <td class="border px-4 py-2 text-sm text-gray-600">Ikan Asin, Tahu Bacem</td>
-            <td class="border px-4 py-2 text-sm text-gray-600">Nasi Uduk, Sate Usus</td>
-            <td class="border px-4 py-2 text-sm text-gray-600">Bakmi Jawa, Perkedel</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  
-    <!-- Submit Button -->
-    <div class="flex justify-center mt-6">
-      <button class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all duration-200">OK</button>
-    </div>
-  </section>
-
-    <!-- Restaurant Section -->
-    <div class="container mx-auto px-4 py-8">
-        <div id="restaurantsList" class="space-y-12">
-            <!-- Restaurants will be inserted here by script.js -->
-        </div>
-    </div>
-
-    <!-- Features Section -->
-    <div>
-        <section class="features">
-            <!-- Put your next layout chunk here -->
         </section>
     </div>
 
-    <!-- footer -->
-    <div class="footer">
-        <p>Ⓒ BSD26 - GoTring</p>
+    <div class="flex justify-center mt-6 mb-8">
+        <button id="generateButton" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-200 font-semibold">
+            Generate Rekomendasi
+        </button>
     </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const restaurants = [
-                {
-                    name: "RESTAURANT PADANG SALERO UNO",
-                    items: [
-                        { name: "Ikan Tongkol Balado", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Ayam Pop", price: "Rp.28.000", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Rendang", price: "Rp.30.000", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Paru Cabe Ijo", price: "Rp.35.000", image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Telur Dadar", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT MINANG ASLI",
-                    items: [
-                        { name: "Sate Padang", price: "Rp.32.000", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Gulai Kambing", price: "Rp.40.000", image: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Dendeng Batokok", price: "Rp.35.000", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT SUNDA MAHARAJA",
-                    items: [
-                        { name: "Nasi Liwet", price: "Rp.30.000", image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Tumis Kangkung", price: "Rp.20.000", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Ayam Goreng", price: "Rp.28.000", image: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Sambal Terasi", price: "Rp.10.000", image: "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURAN JAWA TIMUR",
-                    items: [
-                        { name: "Rawon", price: "Rp.35.000", image: "https://images.unsplash.com/photo-1604908177453-7462950a6cf3?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Soto Ayam", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Tahu Tek", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT ACEH",
-                    items: [
-                        { name: "Mie Aceh", price: "Rp.35.000", image: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Kuah Beulangong", price: "Rp.30.000", image: "https://images.unsplash.com/photo-1611270630411-99356d1e0a9b?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Sate Matang", price: "Rp.32.000", image: "https://images.unsplash.com/photo-1546069901-6586ba033cce?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT BETAWI",
-                    items: [
-                        { name: "Soto Betawi", price: "Rp.30.000", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Kerak Telor", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Asinan Betawi", price: "Rp.22.000", image: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT BALI",
-                    items: [
-                        { name: "Ayam Betutu", price: "Rp.40.000", image: "https://images.unsplash.com/photo-1604908177453-7462950a6cf3?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Babi Guling", price: "Rp.45.000", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Lawar", price: "Rp.28.000", image: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                },
-                {
-                    name: "RESTAURANT MANADO",
-                    items: [
-                        { name: "Tinoransak", price: "Rp.38.000", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Cakalang Fufu", price: "Rp.35.000", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&h=120&auto=format&fit=crop" },
-                        { name: "Bubur Manado", price: "Rp.25.000", image: "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=200&h=120&auto=format&fit=crop" }
-                    ]
-                }
-            ];
 
-            const restaurantsList = document.getElementById('restaurantsList');
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-center mb-10">Pilih Menu Favoritmu</h2>
+        <div id="restaurantsList" class="space-y-12">
+            </div>
+    </div>
 
-            restaurants.forEach(restaurant => {
-                // Create restaurant container
-                const restaurantDiv = document.createElement('div');
-                restaurantDiv.className = 'restaurant-container';
-                
-                // Add restaurant title
-                const title = document.createElement('h2');
-                title.className = 'text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200';
-                title.textContent = restaurant.name;
-                restaurantDiv.appendChild(title);
-                
-                // Create menu items container
-                const menuContainer = document.createElement('div');
-                menuContainer.className = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4';
-                
-                // Add menu items
-                restaurant.items.forEach(item => {
-                    const menuItem = document.createElement('div');
-                    menuItem.className = 'menu-item-card bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-200';
-                    
-                    menuItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="w-full h-32 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-1">${item.name}</h3>
-                            <p class="text-red-500 font-bold mb-3">${item.price}</p>
-                            <div class="quantity-control">
-                                <div class="quantity-btn minus">-</div>
-                                <div class="quantity-value">0</div>
-                                <div class="quantity-btn plus">+</div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    menuContainer.appendChild(menuItem);
-                });
-                
-                restaurantDiv.appendChild(menuContainer);
-                restaurantsList.appendChild(restaurantDiv);
-            });
+    <div>
+        <section class="features">
+        </section>
+    </div>
 
-            // Add event listeners for quantity buttons
-            document.querySelectorAll('.quantity-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const valueElement = this.parentElement.querySelector('.quantity-value');
-                    const menuItemCard = this.closest('.menu-item-card');
-                    let value = parseInt(valueElement.textContent);
-                    
-                    if (this.classList.contains('minus')) {
-                        value = 0; // Set to minimum (0) when minus is clicked
-                    } else if (this.classList.contains('plus')) {
-                        value = 1; // Set to maximum (1) when plus is clicked
-                    }
-                    
-                    valueElement.textContent = value;
-                    
-                    // Toggle selected class based on value
-                    if (value === 1) {
-                        menuItemCard.classList.add('selected');
-                    } else {
-                        menuItemCard.classList.remove('selected');
-                    }
-                });
-            });
-        });
-    </script>
+    <div class="footer">
+        <p>Ⓒ BSD26 - GOTRING - BPAK2 - (Bella, Petrus, Adam, Rizky)</p>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
