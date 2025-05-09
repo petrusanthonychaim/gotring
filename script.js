@@ -42,81 +42,81 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "RESTAURANT PADANG SALERO UNO",
             items: [
                 { id: "pad1", name: "Ikan salmon balado", price: 15000, categories:["seafood","spicy"], image: "restaurant1/resto1a.jpg" },
-                { id: "pad2", name: "Ayam pop", price: 17500, categories:["meat"], image: "/restaurant1/resto1b.jpg" },
-                { id: "pad3", name: "Rendang", price: 20000, categories:["meat","spicy"], image: "/restaurant1/resto1c.jpg" },
-                { id: "pad4", name: "Paru cabe ijo", price: 20000, categories:["meat","spicy"], image: "/restaurant1/resto1d.jpg" },
-                { id: "pad5", name: "Telur dadar", price: 12000, categories:["egg"], image: "/restaurant1/resto1e.jpg" }
+                { id: "pad2", name: "Ayam pop", price: 17500, categories:["meat"], image: "restaurant1/resto1b.jpg" },
+                { id: "pad3", name: "Rendang", price: 20000, categories:["meat","spicy"], image: "restaurant1/resto1c.jpg" },
+                { id: "pad4", name: "Paru cabe ijo", price: 20000, categories:["meat","spicy"], image: "restaurant1/resto1d.jpg" },
+                { id: "pad5", name: "Telur dadar", price: 12000, categories:["egg"], image: "restaurant1/resto1e.jpg" }
             ]
         },
         {
             name: "KING SEAFOOD",
             items: [
-                { id: "ks1", name: "Mo yung hai udang ayam", price: 30000, categories:["meat","seafood"], image: "/restaurant2/resto2a.jpg" },
-                { id: "ks2", name: "Kangkung cah seafood", price: 35000, categories:["vegetables","seafood"], image: "/restaurant2/resto2b.jpg" },
-                { id: "ks3", name: "Cumi saos padang", price: 45000, categories:["seafood","spicy"], image: "/restaurant2/resto2c.jpg" },
-                { id: "ks4", name: "Gurame goreng", price: 45000, categories:["seafood"], image: "/restaurant2/resto2d.jpg" },
-                { id: "ks5", name: "Udang tauco medan", price: 40000, categories:["seafood"], image: "/restaurant2/resto2e.jpg" }
+                { id: "ks1", name: "Mo yung hai udang ayam", price: 30000, categories:["meat","seafood"], image: "restaurant2/resto2a.jpg" },
+                { id: "ks2", name: "Kangkung cah seafood", price: 35000, categories:["vegetables","seafood"], image: "restaurant2/resto2b.jpg" },
+                { id: "ks3", name: "Cumi saos padang", price: 45000, categories:["seafood","spicy"], image: "restaurant2/resto2c.jpg" },
+                { id: "ks4", name: "Gurame goreng", price: 45000, categories:["seafood"], image: "restaurant2/resto2d.jpg" },
+                { id: "ks5", name: "Udang tauco medan", price: 40000, categories:["seafood"], image: "restaurant2/resto2e.jpg" }
 
             ]
         },
         {
             name: "RUMAH MAKAN MARI JO",
             items: [
-                { id: "mj1", name: "Ayam rica - rica", price: 25000, categories:["meat","spicy"], image: "/restaurant3/resto3a.jpg" },
-                { id: "mj2", name: "Ikan kembung bakar rica", price:25000 , categories:["seafood","spicy"], image: "/restaurant3/resto3b.jpg" },
-                { id: "mj3", name: "Abon cakalang", price:25000 , categories:["seafood"], image: "/restaurant3/resto3c.jpg" },
-                { id: "mj4", name: "Tumis bunga pepaya", price:30000 , categories:["vegetables"], image: "/restaurant3/resto3d.jpg" },
-                { id: "mj5", name: "Ikan cakalang cabe rica", price:35000 , categories:["seafood","spicy"], image: "/restaurant3/resto3e.jpg" }
+                { id: "mj1", name: "Ayam rica - rica", price: 25000, categories:["meat","spicy"], image: "restaurant3/resto3a.jpg" },
+                { id: "mj2", name: "Ikan kembung bakar rica", price:25000 , categories:["seafood","spicy"], image: "restaurant3/resto3b.jpg" },
+                { id: "mj3", name: "Abon cakalang", price:25000 , categories:["seafood"], image: "restaurant3/resto3c.jpg" },
+                { id: "mj4", name: "Tumis bunga pepaya", price:30000 , categories:["vegetables"], image: "restaurant3/resto3d.jpg" },
+                { id: "mj5", name: "Ikan cakalang cabe rica", price:35000 , categories:["seafood","spicy"], image: "restaurant3/resto3e.jpg" }
             ]
         },
         {
             name: "WARTEG JAYA BAHAR EMAS",
             items: [
-                { id: "wj1", name: "Telur Balado", price:15000 , categories:["egg","spicy"], image: "/restaurant4/resto4a.jpeg" },
-                { id: "wj2", name: "Ayam teriyaki", price:17000 , categories:["meat"], image: "/restaurant4/resto4b.jpg" },
-                { id: "wj3", name: "Oseng tempe", price:8000 , categories:["vegetables"], image: "/restaurant4/resto4c.jpg" },
-                { id: "wj4", name: "Daging sapi lada hitam", price:20000 , categories:["meat","spicy"], image: "/restaurant4/resto4d.jpg" },
-                { id: "wj5", name: "Kailan cah ayam", price:15000 , categories:["vegetables","meat"], image: "/restaurant4/resto4e.jpg" }
+                { id: "wj1", name: "Telur Balado", price:15000 , categories:["egg","spicy"], image: "restaurant4/resto4a.jpeg" },
+                { id: "wj2", name: "Ayam teriyaki", price:17000 , categories:["meat"], image: "restaurant4/resto4b.jpg" },
+                { id: "wj3", name: "Oseng tempe", price:8000 , categories:["vegetables"], image: "restaurant4/resto4c.jpg" },
+                { id: "wj4", name: "Daging sapi lada hitam", price:20000 , categories:["meat","spicy"], image: "restaurant4/resto4d.jpg" },
+                { id: "wj5", name: "Kailan cah ayam", price:15000 , categories:["vegetables","meat"], image: "restaurant4/resto4e.jpg" }
             ]
         },
         {
             name: "GLOBAL SPOON",
             items: [
-                { id: "gs1", name: "Ayam korean d4mn", price:40000 , categories:["meat","spicy"], image: "/restaurant5/resto5a.jpg" },
-                { id: "gs2", name: "Chicken schnitzel & salad", price:50000 , categories:["meat","vegetables"], image: "/restaurant5/resto5b.jpg" },
-                { id: "gs3", name: "Pho ga", price:45000 , categories:["meat","vegetables"], image: "/restaurant5/resto5c.jpg" },
-                { id: "gs4", name: "Ca kho to (Ikan claypot)", price:40000 , categories:["seafood","vegetables"], image: "/restaurant5/resto5d.jpg" },
-                { id: "gs5", name: "Cuppa coup", price:35000 , categories:["seafood","spicy"], image: "/restaurant5/resto5e.jpg" }
+                { id: "gs1", name: "Ayam korean d4mn", price:40000 , categories:["meat","spicy"], image: "restaurant5/resto5a.jpg" },
+                { id: "gs2", name: "Chicken schnitzel & salad", price:50000 , categories:["meat","vegetables"], image: "restaurant5/resto5b.jpg" },
+                { id: "gs3", name: "Pho ga", price:45000 , categories:["meat","vegetables"], image: "restaurant5/resto5c.jpg" },
+                { id: "gs4", name: "Ca kho to (Ikan claypot)", price:40000 , categories:["seafood","vegetables"], image: "restaurant5/resto5d.jpg" },
+                { id: "gs5", name: "Cuppa coup", price:35000 , categories:["seafood","spicy"], image: "restaurant5/resto5e.jpg" }
             ]
         },
         {
             name: "SOTO BU KONDRO",
             items: [
-                { id: "sbk1", name: "Soto betawi daging", price:30000 , categories:["meat","vegetables"], image: "/restaurant6/resto6a.jpg" },
-                { id: "sbk2", name: "Sop iga sapi", price:35000 , categories:["meat"], image: "/restaurant6/resto6b.jpg" },
-                { id: "sbk3", name: "Iga penyet pedas", price:40000 , categories:["meat","spicy"], image: "/restaurant6/resto6c.jpg" },
-                { id: "sbk4", name: "Soto campur santan", price:30000 , categories:["meat"], image: "/restaurant6/resto6d.jpg" },
-                { id: "sbk5", name: "Nasi goreng ayam dan telur", price:30000 , categories:["meat", "egg"], image: "/restaurant6/resto6e.jpg" }
+                { id: "sbk1", name: "Soto betawi daging", price:30000 , categories:["meat","vegetables"], image: "restaurant6/resto6a.jpg" },
+                { id: "sbk2", name: "Sop iga sapi", price:35000 , categories:["meat"], image: "restaurant6/resto6b.jpg" },
+                { id: "sbk3", name: "Iga penyet pedas", price:40000 , categories:["meat","spicy"], image: "restaurant6/resto6c.jpg" },
+                { id: "sbk4", name: "Soto campur santan", price:30000 , categories:["meat"], image: "restaurant6/resto6d.jpg" },
+                { id: "sbk5", name: "Nasi goreng ayam dan telur", price:30000 , categories:["meat", "egg"], image: "restaurant6/resto6e.jpg" }
             ]
         },
         {
             name: "EMPAL GENTONG KANG ADES",
             items: [
-                { id: "eg1", name: "Empal gebuk sapi rica", price:35000 , categories:["meat","spicy"], image: "/restaurant7/resto7a.jpg" },
-                { id: "eg2", name: "Empal cobek pedas", price:35000 , categories:["meat","spicy"], image: "/restaurant7/resto7b.jpg" },
-                { id: "eg3", name: "Empal serundeng", price:30000 , categories:["meat"], image: "/restaurant7/resto7c.jpg" },
-                { id: "eg4", name: "Empal goreng kecap", price:30000 , categories:["meat"], image: "/restaurant7/resto7d.jpg" },
-                { id: "eg5", name: "Semur kentang tahu", price:35000 , categories:["vegetables"], image: "/restaurant7/resto7e.jpg" }
+                { id: "eg1", name: "Empal gebuk sapi rica", price:35000 , categories:["meat","spicy"], image: "restaurant7/resto7a.jpg" },
+                { id: "eg2", name: "Empal cobek pedas", price:35000 , categories:["meat","spicy"], image: "restaurant7/resto7b.jpg" },
+                { id: "eg3", name: "Empal serundeng", price:30000 , categories:["meat"], image: "restaurant7/resto7c.jpg" },
+                { id: "eg4", name: "Empal goreng kecap", price:30000 , categories:["meat"], image: "restaurant7/resto7d.jpg" },
+                { id: "eg5", name: "Semur kentang tahu", price:35000 , categories:["vegetables"], image: "restaurant7/resto7e.jpg" }
             ]
         },
         {
             name: "PECEL PINCUK IBU EDA",
             items: [
-                { id: "ppi1", name: "Karedok pedas", price:15000 , categories:["vegetables","spicy"], image: "/restaurant8/resto8a.jpeg" },
-                { id: "ppi2", name: "Sayur lodeh", price:15000 , categories:["vegetables"], image: "/restaurant8/resto8b.jpg" },
-                { id: "ppi3", name: "Rawon iga sapi", price:30000 , categories:["meat"], image: "/restaurant8/resto8c.jpeg" },
-                { id: "ppi4", name: "Pecel pincuk sayuran", price:15000 , categories:["vegetables"], image: "/restaurant8/resto8d.jpg" },
-                { id: "ppi5", name: "Ayam goreng kremes", price:19000 , categories:["meat"], image: "/restaurant8/resto8e.jpg" }
+                { id: "ppi1", name: "Karedok pedas", price:15000 , categories:["vegetables","spicy"], image: "restaurant8/resto8a.jpeg" },
+                { id: "ppi2", name: "Sayur lodeh", price:15000 , categories:["vegetables"], image: "restaurant8/resto8b.jpg" },
+                { id: "ppi3", name: "Rawon iga sapi", price:30000 , categories:["meat"], image: "restaurant8/resto8c.jpeg" },
+                { id: "ppi4", name: "Pecel pincuk sayuran", price:15000 , categories:["vegetables"], image: "restaurant8/resto8d.jpg" },
+                { id: "ppi5", name: "Ayam goreng kremes", price:19000 , categories:["meat"], image: "restaurant8/resto8e.jpg" }
             ]
         }
     ];
